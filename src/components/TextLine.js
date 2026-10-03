@@ -23,6 +23,7 @@ export function TextLine({ text, tokens: customTokens = null, size = 100, weight
   let prefix = '';
   for (const tok of tokens) {
     const x = measure(prefix, opts).advance + shift;
+    const start = [...prefix].length; // character offset of this token in the line
     prefix += tok;
     if (/^\s+$/.test(tok)) continue;
     const m = measure(tok, opts);
@@ -35,7 +36,7 @@ export function TextLine({ text, tokens: customTokens = null, size = 100, weight
       },
     });
     node.appendChild(span);
-    items.push({ node: span, text: tok, x, advance: m.advance, ink: { left: x + m.inkLeft, right: x + m.inkRight, top: -m.ascent, bottom: m.descent }, cx: x + (m.inkLeft + m.inkRight) / 2 });
+    items.push({ node: span, text: tok, start, x, advance: m.advance, ink: { left: x + m.inkLeft, right: x + m.inkRight, top: -m.ascent, bottom: m.descent }, cx: x + (m.inkLeft + m.inkRight) / 2 });
   }
   const inkBox = { left: shift + full.inkLeft, right: shift + full.inkRight, top: -full.ascent, bottom: full.descent };
   return { node, items, inkBox, advance: full.advance, size, baselineOffset: base };

@@ -5,6 +5,7 @@ import s02 from './s02-sixty-seconds.js';
 import s03 from './s03-pourquoi.js';
 import s04 from './s04-logo-cube.js';
 import s05 from './s05-pill-website.js';
+import s06 from './s06-victor-email.js';
 
 export const scenes = {
   s01,
@@ -12,6 +13,7 @@ export const scenes = {
   s03,
   s04,
   s05,
+  s06,
 };
 
 // Any scene listed in the timeline without a module yet gets a labelled placeholder.

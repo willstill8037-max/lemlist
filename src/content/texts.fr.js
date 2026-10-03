@@ -6,6 +6,10 @@ export const content = {
   s02: { sixty: '60.S', line: ['p', 'o', 'ur', ' ', 'vous', ' ', 'expliquer'] },
   s03: { word: 'Pourquoi', mark: '?' },
   pill: { brand: 'lemlist' },
+  s06: {
+    sender: 'Victor', email: 'Victor@gmail.com', button: 'Envoyer',
+    body: ['Bonjour, je vous invite à découvrir notre solution innovante', 'qui pourrait transformer votre activité.'],
+  },
   website: {
     headline: ['La plateforme pour faire de l’outbound avec', 'précision grâce à l’IA'],
     subtitle: [
