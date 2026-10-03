@@ -1,0 +1,12 @@
+node_modules/
+renders/.frames/
+renders/frames/
+renders/scenes/
+renders/range_*.mp4
+renders/compare/
+reference/*.mp4
+reference/frames/
+.cache/
+__pycache__/
+*.pyc
+.venv/
