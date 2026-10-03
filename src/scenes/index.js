@@ -2,10 +2,16 @@
 import { placeholder } from './_placeholder.js';
 import s01 from './s01-ok-ring.js';
 import s02 from './s02-sixty-seconds.js';
+import s03 from './s03-pourquoi.js';
+import s04 from './s04-logo-cube.js';
+import s05 from './s05-pill-website.js';
 
 export const scenes = {
   s01,
   s02,
+  s03,
+  s04,
+  s05,
 };
 
 // Any scene listed in the timeline without a module yet gets a labelled placeholder.
