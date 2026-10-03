@@ -1,0 +1,2 @@
+Tempo estimate (low-band onset autocorrelation): 120.0 BPM (beat period 0.500 s = 30.0 frames @60fps)
+Half-time / double-time alternatives: 60.0 / 240.0 BPM

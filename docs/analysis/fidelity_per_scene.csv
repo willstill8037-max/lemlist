@@ -1,0 +1,22 @@
+scene,in,out,title,mean_mae,median_psnr_db,mean_edge_iou,worst_frame,worst_mae
+s01,0,53,"OK ring fly-through",11.21,17.89,0.168,52,47.16
+s02,52,136,"60 s → pour vous expliquer",11.87,18.07,0.305,52,47.16
+s03,136,155,"Pourquoi ?",1.71,33.29,0.637,136,2.42
+s04,155,204,"3D lemlist cube",7.78,23.72,0.283,158,87.93
+s05,204,370,"lemlist pill + website",2.97,26.99,0.663,369,5.92
+s06,346,546,"Victor email composer",2.03,33.23,0.707,369,5.92
+s07,546,836,"Spam inbox",6.97,23.84,0.292,799,13.65
+s08,836,940,"Falling email, pile",7.75,27.19,0.085,843,11.82
+s09,940,1215,"Et oui… vous n'êtes plus un.e pro de la vente → mosquito",2.19,31.23,0.675,1203,5.18
+s10,1215,1510,"Mosquito hovering – bzzzz",1.83,32.26,0.227,1394,4.10
+s11,1510,1717,"et c'est exactement → bzzzz + flamethrower",9.79,23.49,0.231,1510,31.25
+s12,1717,1748,"Black",0.00,84.03,1.000,1717,0.00
+s13,1748,1892,"lemlist pill – Vous contactez les bonnes personnes",4.58,23.58,0.413,1890,9.35
+s14,1892,1996,"Prompt typing + Démarrer",3.23,27.66,0.249,1916,4.69
+s15,1996,2160,"Leads table, buying signal",7.78,20.24,0.323,2020,10.29
+s16,2160,2385,"Blue flow: signal → AI email → Gmail → sequence tree",7.69,25.74,0.309,2384,18.51
+s17,2385,2435,"Résultat",5.69,26.75,0.169,2434,7.82
+s18,2435,2586,"LinkedIn reply → fan of replies → Plus de réponses",9.66,21.32,0.277,2585,26.69
+s19,2586,2695,"Calendar – demos booked",14.06,18.43,0.232,2586,31.79
+s20,2695,2915,"Outro – lemlist pill + CTA + app table",3.97,23.74,0.436,2766,5.77
+s21,2915,3099,"Outro – www.lemlist.fr",1.58,31.78,0.629,2945,1.72

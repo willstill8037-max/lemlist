@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>lemlist motion reconstruction</title>
+  <link rel="stylesheet" href="./theme/theme.css" />
+  <style>
+    body.preview { background: #111; color: #ddd; font: 13px/1.4 system-ui, sans-serif; }
+    body.preview #wrap { padding: 12px; }
+    body.preview #viewport { position: relative; overflow: hidden; background: #000; box-shadow: 0 0 0 1px #333; }
+    #ui { display: none; margin-top: 10px; gap: 10px; align-items: center; flex-wrap: wrap; }
+    body.preview #ui { display: flex; }
+    #ui input[type=range] { width: 640px; }
+    #ui button, #ui select { background: #222; color: #ddd; border: 1px solid #444; border-radius: 4px; padding: 4px 10px; }
+    #ui code { color: #9cf; }
+    body.render { overflow: hidden; }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="viewport"><div id="stage"></div></div>
+    <div id="ui">
+      <button id="play">▶ play</button>
+      <input id="scrub" type="range" min="0" max="3098" step="1" value="0" />
+      <code id="tc">00:00.000 · f0</code>
+      <select id="scenes"></select>
+      <label><input type="checkbox" id="audio" checked /> audio</label>
+      <span>keys: space play · ←/→ frame · shift+←/→ 1 s</span>
+    </div>
+  </div>
+  <audio id="snd" src="../assets/audio/source-mix.m4a" preload="auto"></audio>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+120 BPM grid best phase: 0.470 s (only 26 % of strong-onset weight within ±40 ms of the grid -> edit is NOT locked to a strict beat grid)
+42 / 54 visual events have an audio onset within ±4 frames (±67 ms).
+
+time_s  frame  event                      nearest_onset_delta  onset_strength
+ 0.000      0  s01 cut                     +0.061 s            0.43
+ 0.867     52  ring → 60.S                 +0.014 s            0.37
+ 0.867     52  s02 cut                     +0.014 s            0.37
+ 1.400     84  pull-back                   -0.049 s            0.39
+ 2.267    136  s03 cut                     +0.054 s            0.84
+ 2.583    155  s04 cut                     +0.108 s            0.30
+ 3.400    204  cube → pill                 +0.041 s            0.60
+ 3.400    204  s05 cut                     +0.041 s            0.60
+ 3.767    226  site swings up              +0.024 s            0.24
+ 5.767    346  s06 cut                     +0.024 s            0.79
+ 6.100    366  Victor card lands           +0.021 s            0.88
+ 8.833    530  Envoyer click               -0.082 s            0.29
+ 9.100    546  s07 cut                     +0.031 s            0.37
+ 9.767    586  row 1 selected              -0.006 s            0.25
+10.067    604  rows 2-4 selected           +0.034 s            0.36
+11.100    666  mails deleted / refill      +0.011 s            0.31
+11.767    706  row select                  +0.074 s            0.38
+12.983    779  popup on plane              -0.002 s            0.72
+13.933    836  s08 cut                     +0.038 s            0.80
+14.567    874  cut to pile                 +0.184 s            0.18
+14.767    886  mail lands on pile          -0.016 s            0.18
+15.667    940  s09 cut                     +0.054 s            0.64
+16.267    976  avatar + crown              +0.004 s            0.46
+16.833   1010  crown hits avatar           -0.012 s            0.25
+17.867   1072  cut: vous êtes              -0.066 s            0.79
+19.733   1184  avatar shatters             -0.022 s            0.27
+20.250   1215  s10 cut                     -0.059 s            0.17
+22.667   1360  big bzzzz                   +0.584 s            0.32
+25.167   1510  s11 cut                     -0.086 s            0.49
+26.600   1596  bzzzz title                 -0.039 s            0.32
+27.533   1652  flamethrower                -0.052 s            0.61
+28.617   1717  s12 cut                     +0.024 s            0.52
+29.133   1748  s13 cut                     +0.058 s            0.45
+29.300   1758  logo pop                    -0.039 s            0.28
+30.200   1812  Vous                        +0.061 s            0.27
+31.533   1892  s14 cut                     +0.008 s            0.22
+31.983   1919  typing ends                 -0.002 s            0.28
+32.900   1974  Démarrer click              -0.059 s            0.19
+33.267   1996  s15 cut                     -0.006 s            0.13
+34.400   2064  signal lifts                -0.049 s            0.37
+36.000   2160  s16 cut                     +0.041 s            0.58
+36.800   2208  whip pan 1                  -0.039 s            0.33
+37.900   2274  whip pan 2                  +0.131 s            0.15
+38.733   2324  tree grows                  +0.028 s            0.33
+39.750   2385  s17 cut                     +0.011 s            0.31
+40.583   2435  s18 cut                     +0.068 s            0.39
+41.983   2519  Plus                        -0.022 s            0.79
+43.100   2586  s19 cut                     +0.241 s            0.22
+43.700   2622  replies sucked in           +0.021 s            0.45
+44.917   2695  s20 cut                     -0.076 s            0.34
+45.117   2707  logo pop                    +0.024 s            0.29
+46.400   2784  CTA click                   +0.041 s            0.69
+48.583   2915  URL card                    +0.118 s            0.26
+48.583   2915  s21 cut                     +0.118 s            0.26

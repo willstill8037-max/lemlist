@@ -1,0 +1,23 @@
+{
+  "name": "lemlist-motion-reconstruction",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frame-accurate, editable reconstruction of the lemlist motion-design video (1920x1080, 60 fps, 51.65 s) as a deterministic HTML/CSS/SVG/Canvas animation.",
+  "type": "module",
+  "scripts": {
+    "preview": "node scripts/serve.mjs",
+    "render": "node scripts/render.mjs",
+    "render:frame": "node scripts/render.mjs --frame",
+    "compare": "node scripts/compare.mjs",
+    "check": "node scripts/check-determinism.mjs",
+    "side-by-side": "bash scripts/side-by-side.sh",
+    "reference": "bash scripts/extract-reference.sh"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1",
+    "pngjs": "7.0.0"
+  }
+}
