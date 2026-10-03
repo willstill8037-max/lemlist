@@ -1,35 +1,248 @@
 {
-  "fps": 60,
-  "width": 1920,
-  "height": 1080,
-  "durationFrames": 3099,
-  "note": "All times are frame numbers of the 60 fps reference (frame n = n/60 s). 'in' inclusive, 'out' exclusive. events: global frames. motionBlur: [fromFrame, toFrame, samples, shutterAngleDeg].",
-  "scenes": [
-    { "id": "s01", "title": "OK ring fly-through", "in": 0, "out": 53, "z": 20, "events": {}, "motionBlur": [[47, 52, 6, 180]] },
-    { "id": "s02", "title": "60 s – starburst, clocks", "in": 52, "out": 100, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s03", "title": "pour vous expliquer", "in": 100, "out": 136, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s04", "title": "Pourquoi ?", "in": 136, "out": 155, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s05", "title": "3D lemlist cube", "in": 155, "out": 206, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s06", "title": "lemlist pill + website", "in": 206, "out": 352, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s07", "title": "Victor email composer", "in": 352, "out": 546, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s08", "title": "Spam inbox", "in": 546, "out": 834, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s09", "title": "Falling email, pile", "in": 834, "out": 940, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s10", "title": "Et oui… vous n'êtes plus un.e pro de la vente", "in": 940, "out": 1122, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s11", "title": "Mosquito arrives, text disintegrates", "in": 1122, "out": 1215, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s12", "title": "Mosquito hovering – bzzzz", "in": 1215, "out": 1510, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s13", "title": "et c'est exactement – Emilie Paris", "in": 1510, "out": 1592, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s14", "title": "BZZZZ + flamethrower", "in": 1592, "out": 1717, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s15", "title": "Black", "in": 1717, "out": 1748, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s16", "title": "lemlist pill – Vous contactez les bonnes personnes", "in": 1748, "out": 1892, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s17", "title": "Prompt typing + Démarrer", "in": 1892, "out": 1996, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s18", "title": "Leads table, buying signal", "in": 1996, "out": 2160, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s19", "title": "Signal → AI email (blue)", "in": 2160, "out": 2290, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s20", "title": "Gmail subject → sequence tree", "in": 2290, "out": 2392, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s21", "title": "Résultat", "in": 2392, "out": 2437, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s22", "title": "LinkedIn reply card", "in": 2437, "out": 2500, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s23", "title": "Plus de réponses", "in": 2500, "out": 2586, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s24", "title": "Calendar – demos booked", "in": 2586, "out": 2695, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s25", "title": "Outro – lemlist + CTA", "in": 2695, "out": 2918, "z": 10, "events": {}, "motionBlur": [] },
-    { "id": "s26", "title": "Outro – www.lemlist.fr", "in": 2918, "out": 3099, "z": 10, "events": {}, "motionBlur": [] }
-  ]
+ "fps": 60,
+ "width": 1920,
+ "height": 1080,
+ "durationFrames": 3099,
+ "note": "All times are frame numbers of the 60 fps reference (frame n = n/60 s). 'in' inclusive, 'out' exclusive. events: global frames. motionBlur: [fromFrame, toFrame, samples, shutterAngleDeg].",
+ "scenes": [
+  {
+   "id": "s01",
+   "title": "OK ring fly-through",
+   "in": 0,
+   "out": 53,
+   "z": 20,
+   "events": {},
+   "motionBlur": [
+    [
+     47,
+     52,
+     6,
+     180
+    ]
+   ]
+  },
+  {
+   "id": "s02",
+   "title": "60 s → pour vous expliquer",
+   "in": 52,
+   "out": 136,
+   "z": 10,
+   "events": {},
+   "motionBlur": [
+    [
+     84,
+     116,
+     8,
+     270
+    ]
+   ]
+  },
+  {
+   "id": "s03",
+   "title": "Pourquoi ?",
+   "in": 136,
+   "out": 155,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s04",
+   "title": "3D lemlist cube",
+   "in": 155,
+   "out": 206,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s05",
+   "title": "lemlist pill + website",
+   "in": 206,
+   "out": 352,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s06",
+   "title": "Victor email composer",
+   "in": 352,
+   "out": 546,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s07",
+   "title": "Spam inbox",
+   "in": 546,
+   "out": 834,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s08",
+   "title": "Falling email, pile",
+   "in": 834,
+   "out": 940,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s09",
+   "title": "Et oui… vous n'êtes plus un.e pro de la vente",
+   "in": 940,
+   "out": 1122,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s10",
+   "title": "Mosquito arrives, text disintegrates",
+   "in": 1122,
+   "out": 1215,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s11",
+   "title": "Mosquito hovering – bzzzz",
+   "in": 1215,
+   "out": 1510,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s12",
+   "title": "et c'est exactement – Emilie Paris",
+   "in": 1510,
+   "out": 1592,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s13",
+   "title": "BZZZZ + flamethrower",
+   "in": 1592,
+   "out": 1717,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s14",
+   "title": "Black",
+   "in": 1717,
+   "out": 1748,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s15",
+   "title": "lemlist pill – Vous contactez les bonnes personnes",
+   "in": 1748,
+   "out": 1892,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s16",
+   "title": "Prompt typing + Démarrer",
+   "in": 1892,
+   "out": 1996,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s17",
+   "title": "Leads table, buying signal",
+   "in": 1996,
+   "out": 2160,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s18",
+   "title": "Signal → AI email (blue)",
+   "in": 2160,
+   "out": 2290,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s19",
+   "title": "Gmail subject → sequence tree",
+   "in": 2290,
+   "out": 2392,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s20",
+   "title": "Résultat",
+   "in": 2392,
+   "out": 2437,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s21",
+   "title": "LinkedIn reply card",
+   "in": 2437,
+   "out": 2500,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s22",
+   "title": "Plus de réponses",
+   "in": 2500,
+   "out": 2586,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s23",
+   "title": "Calendar – demos booked",
+   "in": 2586,
+   "out": 2695,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s24",
+   "title": "Outro – lemlist + CTA",
+   "in": 2695,
+   "out": 2918,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  },
+  {
+   "id": "s25",
+   "title": "Outro – www.lemlist.fr",
+   "in": 2918,
+   "out": 3099,
+   "z": 10,
+   "events": {},
+   "motionBlur": []
+  }
+ ]
 }

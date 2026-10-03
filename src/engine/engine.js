@@ -14,6 +14,8 @@ export async function createEngine({ stage, timeline, scenes, onlyScenes = null 
   const fps = timeline.fps;
   const W = timeline.width, H = timeline.height;
   const entries = [];
+  // Fonts first: scenes measure text (canvas metrics) while they are built.
+  await loadFonts();
 
   for (const def of timeline.scenes) {
     if (onlyScenes && !onlyScenes.includes(def.id)) continue;
@@ -84,13 +86,16 @@ export async function createEngine({ stage, timeline, scenes, onlyScenes = null 
   };
 }
 
+export async function loadFonts() {
+  if (!document.fonts) return;
+  const weights = [300, 400, 500, 600, 700, 800, 900];
+  await Promise.all(weights.map((w) => document.fonts.load(`${w} 40px Inter`, 'AaéÉàç€’…'))).catch(() => {});
+  await document.fonts.ready;
+}
+
 /** Resolve once every font face used on the page and every <img> are decoded. */
 export async function waitForAssets(root) {
-  if (document.fonts) {
-    const weights = [300, 400, 500, 600, 700, 800, 900];
-    await Promise.all(weights.map((w) => document.fonts.load(`${w} 40px Inter`, 'AaéÉàç€’…'))).catch(() => {});
-    await document.fonts.ready;
-  }
+  await loadFonts();
   const imgs = [...root.querySelectorAll('img')];
   await Promise.all(imgs.map((img) => (img.complete && img.naturalWidth ? img.decode().catch(() => {}) : new Promise((res) => {
     img.addEventListener('load', () => img.decode().then(res, res), { once: true });
