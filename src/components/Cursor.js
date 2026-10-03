@@ -11,6 +11,9 @@ const SHAPES = {
   // navigation arrow, tip at the top-right corner (S07, measured on f640: 58 x 54 px)
   plane: (fill, stroke) => `<svg xmlns="http://www.w3.org/2000/svg" width="60" height="56" viewBox="-59 -1 60 56" style="overflow:visible;position:absolute;left:-59px;top:-1px">
       <path d="M0 0 L-58 19 L-26 27 L-28 54 Z" fill="${fill}" stroke="${stroke}" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
+  // same arrow mirrored: tip at the top-left (S15–S16, S24, navy on light)
+  planeL: (fill, stroke) => `<svg xmlns="http://www.w3.org/2000/svg" width="60" height="56" viewBox="-1 -1 60 56" style="overflow:visible;position:absolute;left:-1px;top:-1px">
+      <path d="M0 0 L58 19 L26 27 L28 54 Z" fill="${fill}" stroke="${stroke}" stroke-width="2" stroke-linejoin="round"/></svg>`,
 };
 
 export function Cursor({ shape = 'mac', fill = '#111', stroke = '#fff', size = 1 } = {}) {

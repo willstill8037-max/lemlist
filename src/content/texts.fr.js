@@ -18,6 +18,7 @@ export const content = {
   },
   s11: { buzz: 'bzzzz' },
   s12: { exact: 'exactement', buzz: 'bzzzz', name: 'Emilie Paris', email: 'Emilie.P@gmail.com', body: 'Coucou c’est encore moi 👋' },
+  s15: { line1: 'Vous contactez', line2: 'les bonnes personnes', title: 'Bonjour Victor, que voulez-vous faire ?', placeholder: 'Décrivez votre besoin...', button: 'Démarrer' },
   website: {
     headline: ['La plateforme pour faire de l’outbound avec', 'précision grâce à l’IA'],
     subtitle: [

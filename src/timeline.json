@@ -17,7 +17,7 @@
     {"id": "s11", "title": "Mosquito hovering – bzzzz", "in": 1215, "out": 1510, "z": 10, "events": {}, "motionBlur": []},
     {"id": "s12", "title": "et c'est exactement → bzzzz + flamethrower", "in": 1510, "out": 1717, "z": 10, "events": {}, "motionBlur": [[1510, 1520, 6, 180], [1584, 1604, 6, 180], [1651, 1660, 4, 180]]},
     {"id": "s14", "title": "Black", "in": 1717, "out": 1748, "z": 10, "events": {}, "motionBlur": []},
-    {"id": "s15", "title": "lemlist pill – Vous contactez les bonnes personnes", "in": 1748, "out": 1892, "z": 10, "events": {}, "motionBlur": []},
+    {"id": "s15", "title": "lemlist pill – Vous contactez les bonnes personnes", "in": 1748, "out": 1892, "z": 10, "events": {}, "motionBlur": [[1748, 1756, 6, 180], [1796, 1812, 8, 180], [1862, 1880, 6, 180]]},
     {"id": "s16", "title": "Prompt typing + Démarrer", "in": 1892, "out": 1996, "z": 10, "events": {}, "motionBlur": []},
     {"id": "s17", "title": "Leads table, buying signal", "in": 1996, "out": 2160, "z": 10, "events": {}, "motionBlur": []},
     {"id": "s18", "title": "Signal → AI email (blue)", "in": 2160, "out": 2290, "z": 10, "events": {}, "motionBlur": []},

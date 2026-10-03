@@ -38,10 +38,10 @@ export function LogoPill({ L = 63, text = 'lemlist', textColor = '#202b45', typi
    * settle(i): 0..1, how far character i has gone from the light "typing"
    *            colour to the final navy (default: already settled).
    */
-  function set({ cx = 960, cy = 540, scale = 1, chars = text.length, settle = () => 1, opacity = 1, boxOpacity = 1, boxScaleX = 1, blur = 0, logoOpacity = 1 } = {}) {
+  function set({ cx = 960, cy = 540, scale = 1, chars = text.length, settle = () => 1, opacity = 1, boxOpacity = 1, boxScaleX = 1, blur = 0, logoOpacity = 1, logoScale = 1 } = {}) {
     css(node, { transform: `translate(${cx.toFixed(2)}px, ${cy.toFixed(2)}px) scale(${scale.toFixed(4)})`, opacity, filter: blur > 0.05 ? `blur(${blur.toFixed(2)}px)` : 'none' });
     css(outer, { opacity: boxOpacity, transform: `scaleX(${boxScaleX})`, transformOrigin: `${0.33 * L}px 50%` });
-    css(logo, { opacity: logoOpacity });
+    css(logo, { opacity: logoOpacity, transform: logoScale !== 1 ? `scale(${logoScale.toFixed(4)})` : 'none' });
     line.items.forEach((it, i) => {
       css(it.node, { opacity: clamp(chars - i), color: mixColor(typingColor, textColor, clamp(settle(i))) });
     });
