@@ -1,4 +1,4 @@
-// Small "reply" message cards of S20 (LinkedIn / WhatsApp / Gmail replies),
+// Small "reply" message cards of S18 (LinkedIn / WhatsApp / Gmail replies),
 // 556 x 186 px at scale 1 (f2547 framing), plus the tall LinkedIn
 // conversation card that opens the scene.
 import { el, css } from '../engine/dom.js';
@@ -29,7 +29,7 @@ export function ReplyCard({ name, channel = 'linkedin', lines = [], avatarColor 
   return { node };
 }
 
-/** Tall LinkedIn conversation card (S20 opening). Local origin = top-left of the white card (544 px wide). */
+/** Tall LinkedIn conversation card (S18 opening). Local origin = top-left of the white card (544 px wide). */
 export function LinkedInThread({ header, messages, avatar }) {
   const node = el('div', { style: abs(0, 0, 0, 0) });
   const frame = el('div', { style: abs(-16, -16, 576, 576, { borderRadius: '30px', background: 'rgba(255,255,255,0.25)', boxShadow: 'inset 0 0 0 1.5px rgba(255,255,255,0.5)' }) });

@@ -1,4 +1,4 @@
-// S21 · f2586–2694 · Booked demos.
+// S19 · f2586–2694 · Booked demos.
 //  f2582–2606 a dark calendar window rises from the bottom-right (blur) next
 //            to four floating reply cards (James Foster, Oliver Reed, Lucas
 //            Grant, Ethan Brooks) that drift slowly.
@@ -26,7 +26,7 @@ const EV_H = 206; // vertical pitch of the events
 export default {
   mount(root) {
     root.appendChild(Background({ variant: 'blue' }).node);
-    const c = content.s21;
+    const c = content.s19;
     this.panel = el('div', { style: abs(0, 0, 920, 2200, { borderRadius: '28px', background: '#18171f', boxShadow: '0 30px 80px rgba(10,20,60,0.35)' }) });
     [['#e0444f', 36], ['#e9b33c', 58], ['#43a95a', 80]].forEach(([col, x]) => this.panel.appendChild(el('div', { style: abs(x - 7, 30, 14, 14, { borderRadius: '50%', background: col }) })));
     this.events = c.events.map(([title, time], i) => {

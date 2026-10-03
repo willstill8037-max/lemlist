@@ -1,4 +1,4 @@
-// White "Bonjour Victor, que voulez-vous faire ?" prompt card (S15–S16).
+// White "Bonjour Victor, que voulez-vous faire ?" prompt card (S13–S14).
 // Coordinates = screen pixels of reference frame f1880 (card 465–1451 x 490–931).
 import { el, css } from '../engine/dom.js';
 import { TextLine } from './TextLine.js';

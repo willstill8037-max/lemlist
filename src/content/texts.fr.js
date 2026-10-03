@@ -16,11 +16,11 @@ export const content = {
     a1: ['vous', ' ', 'n’êtes', ' ', 'plus'], a2: ['un.e', ' ', 'pro', ' ', 'de', ' ', 'la', ' ', 'vente'],
     b1: ['vous', ' ', 'êtes'], b2: ['ce', ' ', 'moustique'],
   },
-  s11: { buzz: 'bzzzz' },
-  s12: { exact: 'exactement', buzz: 'bzzzz', name: 'Emilie Paris', email: 'Emilie.P@gmail.com', body: 'Coucou c’est encore moi 👋' },
-  s15: { line1: 'Vous contactez', line2: 'les bonnes personnes', title: 'Bonjour Victor, que voulez-vous faire ?', placeholder: 'Décrivez votre besoin...', button: 'Démarrer' },
-  s16: { prompt: 'Trouve moi des CFOs B2B tech en France pour vendre ma solution', button: 'Démarrer' },
-  s17: {
+  s10: { buzz: 'bzzzz' },
+  s11: { exact: 'exactement', buzz: 'bzzzz', name: 'Emilie Paris', email: 'Emilie.P@gmail.com', body: 'Coucou c’est encore moi 👋' },
+  s13: { line1: 'Vous contactez', line2: 'les bonnes personnes', title: 'Bonjour Victor, que voulez-vous faire ?', placeholder: 'Décrivez votre besoin...', button: 'Démarrer' },
+  s14: { prompt: 'Trouve moi des CFOs B2B tech en France pour vendre ma solution', button: 'Démarrer' },
+  s15: {
     tabs: [['Entreprises européennes', '6512', true], ['Directeurs marketing', '100K+', false], ['Directeurs financiers', '15K', false]],
     headers: [['Nom complet', -443], ['E-mail', -47], ['Téléphone', 312], ['Dernier signal détecté', 734], ['Entreprise', 1496]],
     rows: [
@@ -35,13 +35,13 @@ export const content = {
       { name: 'Pierre Garnier', email: 'pierre.g@pepsi.com', phone: '+33 6 23 45 67 89', signal: 'Un employé de Scaleway a visité votre...', dot: 'indigo', company: 'Pepsi', logoColor: '#1b4fa0', hair: '#4b3a2a' },
     ],
   },
-  s18: {
+  s16: {
     signal: 'A annoncé sa récente levée de fonds',
     email: ['Bonjour Claire,', '', 'Félicitations pour votre récente levée et votre', 'expansion aux US !', '', 'Lever des fonds, c’est bien. Les perdre en frais de', 'change, moins.', '', 'Des boîtes comme Globex ont économisé +50k€/an', 'en optimisant leur gestion USD/EUR.'],
     from: 'Victor', to: 'to : Claire Dubois', subject: 'Éviter les doubles frais USD/EUR',
   },
-  s19: { word: 'Résultat' },
-  s20: {
+  s17: { word: 'Résultat' },
+  s18: {
     header: 'Claire Dubois',
     thread: [
       { name: 'Victor', lines: ['Bonjour Claire,', '', 'Je vous avais écrit par email suite à votre', 'expansion aux US, 🙂 tente ici', '', 'Comment vous gérez aujourd’hui les flux USD/', 'EUR ?', '', 'On voit souvent 2–3 optimisations simples', 'dans ce type de situations, je peux vous les', 'partager si c’est un sujet ?'] },
@@ -60,7 +60,7 @@ export const content = {
     chip: 'New message',
     words: ['Plus', 'de', 'réponses'],
   },
-  s21: {
+  s19: {
     events: [['RDV Alex.F X Victor - Demo.F', '8H00 - 8H30'], ['James.F X Victor - Demo', '8H00 - 8H30'], ['Ethan.B X Victor - Demo', '09H30 - 10H30'],
       ['Lucas.G X Victor - Demo', '10H30 - 11H00'], ['Olivier.R X Victor - Demo', '11H00 - 11H30'], ['John.W X Victor - Demo', '11H30 - 12H00'],
       ['Sandrine.R X Victor - Demo', '12H00 - 12H30'], ['Jean-Luc.P X Victor - Demo', '12H30 - 13H00']],
@@ -71,6 +71,20 @@ export const content = {
       { at: [-150, 852], name: 'Ethan Brooks', channel: 'linkedin', lines: ['Hello John,', '', 'C’est parfait le matin à 9h30 c’est bon ? À très', 'bientôt, j’ai hâte !'], avatarColor: '#2d211b' },
     ],
   },
+  s20: {
+    cta: ['Démarrez', ' ', 'votre', ' ', 'essai', ' ', 'gratuit'],
+    table: {
+      sidebar: ['Pre-set filters', 'lemlist filters', 'Company', 'Job title & experience'],
+      tabs: [['European Companies', '6512', true], ['Marketing Directors', '100K+', false], ['CFOs', '15K', false]],
+      headers: [['Full name', 586], ['Email', 878], ['Phone', 1096], ['Company', 1314], ['Job title', 1556]],
+      rows: [
+        { name: 'Clara Beaumont', email: 'FIND EMAIL', phone: 'FIND PHONE', company: 'The Walt Disney Co...', job: 'Chief Financial Officer  +1', hair: '#6b3d24', logo: '#111', li: false },
+        { name: 'Matteo Ricciardi', email: 'No email found', phone: '(405) 555-0128', company: 'Ferrari', job: 'Chief Financial Officer', hair: '#1c1412', logo: '#111', li: true },
+        { name: 'Inès Valette', email: 'debbie.baker@exa...', phone: 'FIND PHONE', company: 'Louis Vuitton', job: 'Chief Financial Officer', hair: '#2a2420', logo: '#1d4fa8', li: true },
+      ],
+    },
+  },
+  s21: { url: 'www.lemlist.fr' },
   website: {
     headline: ['La plateforme pour faire de l’outbound avec', 'précision grâce à l’IA'],
     subtitle: [

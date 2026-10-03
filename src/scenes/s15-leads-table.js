@@ -1,4 +1,4 @@
-// S17 · f1996–2159 · The prompt card is swept out to the left while the lemlist
+// S15 · f1996–2159 · The prompt card is swept out to the left while the lemlist
 // leads table slides in from the right (f1996–f2026), lying in perspective.
 // The pointer hovers the "TROUVER TÉLÉPHONE" area; the first buying signal
 // "A annoncé sa récente levée de fonds" lifts off the table with a blue glow
@@ -6,7 +6,7 @@
 // view onto the signal column, then a slow push until the cut at f2160.
 // Placement: homography from 4 table anchors (name/logo of rows 1 and 7)
 // measured on f2026, f2060, f2098 and derived from 4 other anchors on the
-// front-facing frames f2110 and f2158 (docs/ANALYSIS.md §S17).
+// front-facing frames f2110 and f2158 (docs/ANALYSIS.md §S15).
 
 import { el, css } from '../engine/dom.js';
 import { sampled, progress, clamp, lerp } from '../engine/anim.js';
@@ -35,13 +35,13 @@ const KEYROWS = G(KEYS.map(([f, P]) => [f, P.flat()]));
 export default {
   mount(root) {
     root.appendChild(Background({ variant: 'light' }).node);
-    const c = content.s17;
-    // outgoing prompt card (continuation of S16)
+    const c = content.s15;
+    // outgoing prompt card (continuation of S14)
     this.card = el('div', { style: { position: 'absolute', left: '0', top: '0', width: '1920px', height: '1080px' } });
     this.card.appendChild(el('div', { style: { position: 'absolute', left: '468px', top: '360px', width: '996px', height: '304px', borderRadius: '34px', background: 'rgba(214,220,238,0.75)' } }));
     this.card.appendChild(el('div', { style: { position: 'absolute', left: '480px', top: '372px', width: '972px', height: '280px', borderRadius: '26px', background: '#ffffff' } }));
     this.card.appendChild(el('div', { style: { position: 'absolute', left: '730px', top: '400px', width: '690px', height: '46px', borderRadius: '10px', background: '#f1f2f6' } }));
-    const pt = TextLine({ text: content.s16.prompt, size: 19.8, weight: 500, color: '#1e2433' });
+    const pt = TextLine({ text: content.s14.prompt, size: 19.8, weight: 500, color: '#1e2433' });
     css(pt.node, { transform: 'translate(752px, 428px)' });
     this.card.appendChild(pt.node);
     root.appendChild(this.card);

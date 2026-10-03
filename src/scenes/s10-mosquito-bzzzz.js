@@ -1,4 +1,4 @@
-// S11 · f1215–1509 · The mosquito hovers alone in the dark (f1216–f1308),
+// S10 · f1215–1509 · The mosquito hovers alone in the dark (f1216–f1308),
 // a small "bzzzz" pops above it as the camera pushes in (f1312–f1358), then a
 // closer framing (f1360–f1404) with a big receding "bzzzz" top right and a
 // trail of small "bzzzz" letters behind its tail; pull back (f1404–f1426) and
@@ -26,7 +26,7 @@ const BIG = G([[1362, [1040, 410, 120]], [1366, [1030, 400, 306]], [1370, [1020,
 export default {
   mount(root) {
     root.appendChild(Background({ variant: 'dark' }).node);
-    const word = content.s11.buzz;
+    const word = content.s10.buzz;
     this.big = BuzzText({ text: word });
     this.small = BuzzText({ text: word });
     this.trail = BuzzText({ text: word, ry: -10 });

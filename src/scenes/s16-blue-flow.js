@@ -1,4 +1,4 @@
-// S18 · f2160–2384 · Blue workflow canvas (one continuous camera move).
+// S16 · f2160–2384 · Blue workflow canvas (one continuous camera move).
 //  f2160–2178 the buying-signal pill (taken from the table) settles (x0.81 -> x1).
 //  f2208–2226 whip-pan right along the connector line (motion blur) to the
 //            AI email card, which is typed at a decelerating rate (f2222–f2274).
@@ -6,7 +6,7 @@
 //  f2310–2384 the camera drifts down and out while the sequence tree grows
 //            branch by branch (6-frame pop per node).
 // World = screen pixels of f2256 (line y 543). Camera = screen = s·world + T,
-// measured from the tracked cards (docs/ANALYSIS.md §S18). Tree node boxes
+// measured from the tracked cards (docs/ANALYSIS.md §S16). Tree node boxes
 // were measured on f2380 (s = 0.84, T = (-602, -482)) and converted to world.
 
 import { el, css } from '../engine/dom.js';
@@ -37,7 +37,7 @@ const BLUE = '#3f68e8';
 export default {
   mount(root) {
     root.appendChild(Background({ variant: 'blue' }).node);
-    const c = content.s18;
+    const c = content.s16;
     this.world = el('div', { style: { position: 'absolute', left: '0', top: '0', width: '0', height: '0', transformOrigin: '0 0' } });
     root.appendChild(this.world);
     this.world.appendChild(el('div', { style: { position: 'absolute', left: '-1600px', top: `${FLOW_Y - 1.5}px`, width: '4600px', height: '3px', background: 'rgba(225,232,255,0.55)' } }));

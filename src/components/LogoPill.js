@@ -2,7 +2,7 @@
 // Geometry is expressed in units of the logo size L (measured at f300, L = 63 px):
 //   outer box 4.76 L x 1.65 L, inner white box 4.44 L x 1.33 L, logo inset 0.17 L,
 //   word = Inter 500 at 0.93 L, starting 0.25 L right of the logo.
-// Used in S05, S15 and S24 (the same object appears three times in the video).
+// Used in S05, S13 and S20 (the same object appears three times in the video).
 //
 //   const p = LogoPill({ L: 63 });
 //   p.set({ cx, cy, scale, chars, opacity })  // (cx, cy) = centre of the logo square

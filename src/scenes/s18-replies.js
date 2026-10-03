@@ -1,4 +1,4 @@
-// S20 · f2435–2585 · Replies.
+// S18 · f2435–2585 · Replies.
 //  f2435–2470 hard cut: the LinkedIn conversation card (Victor -> Claire,
 //            Claire's reply) drops in; its header fades and the thread scrolls.
 //  f2470–2491 the card is "eaten" from the top (clip) until only Claire's
@@ -7,7 +7,7 @@
 //            the camera zooms out (x0.5 at f2505) and back in.
 //  f2519–2540 "Plus" / "de" / "réponses" appear word by word (light -> white).
 //  f2575–2585 everything slides left with blur (the title faster: parallax),
-//            while the dark calendar card of S21 rises from the bottom.
+//            while the dark calendar card of S19 rises from the bottom.
 // World = screen pixels of f2547.
 
 import { el, css } from '../engine/dom.js';
@@ -28,7 +28,7 @@ const CAM = G([[2491, 1, 0, 0], [2498, 0.7, 270, 170], [2505, 0.5, 645, 460], [2
 export default {
   mount(root) {
     root.appendChild(Background({ variant: 'blue' }).node);
-    const c = content.s20;
+    const c = content.s18;
     this.thread = LinkedInThread({ header: c.header, messages: c.thread, avatar: '../assets/images/avatar-woman.png' });
     root.appendChild(this.thread.node);
     this.group = el('div', { style: { position: 'absolute', left: '0', top: '0', width: '0', height: '0', transformOrigin: '0 0' } });

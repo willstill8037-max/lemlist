@@ -1,9 +1,9 @@
-// S16 · f1892–1995 · Close-up of the prompt field: "Trouve moi des CFOs B2B
+// S14 · f1892–1995 · Close-up of the prompt field: "Trouve moi des CFOs B2B
 // tech en France pour vendre ma solution" is typed at ~2 characters/frame
 // (f1888–f1919) with a blinking caret; at f1946 the camera pulls back fast
 // (motion blur) to the field with its "Démarrer" button; the pointer clicks
 // (f1974), the message slides right into a grey bubble (f1964–f1970) and the
-// button collapses into a small loader (f1980–f1992). The leads table of S17
+// button collapses into a small loader (f1980–f1992). The leads table of S15
 // slides in from the right at f1990.
 // World = screen pixels of f1958 (field 480–1452 x 372–652).
 
@@ -24,7 +24,7 @@ const TYPED = G([[1887.5, 0], [1892, 9], [1898, 21], [1904, 32], [1910, 44], [19
 export default {
   mount(root) {
     root.appendChild(Background({ variant: 'light' }).node);
-    const c = content.s16;
+    const c = content.s14;
     this.world = el('div', { style: { position: 'absolute', left: '0', top: '0', width: '1920px', height: '1080px', transformOrigin: '0 0' } });
     root.appendChild(this.world);
     this.world.appendChild(el('div', { style: abs(468, 360, 996, 304, { borderRadius: '34px', background: 'rgba(214,220,238,0.75)' }) }));

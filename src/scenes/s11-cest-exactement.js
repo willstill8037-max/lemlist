@@ -1,4 +1,4 @@
-// S12 · f1510–1716 · "et c'est exactement" + flamethrower.
+// S11 · f1510–1716 · "et c'est exactement" + flamethrower.
 //  f1510     cut: close on a dark email card (Emilie Paris) that pulls back to
 //            the bottom of the frame (f1510–f1520, defocus 6 -> 0 px); "et" at
 //            the top, the mosquito enters from the right.
@@ -36,8 +36,8 @@ export default {
   mount(root) {
     this.bg = Background({ variant: 'dark' });
     root.appendChild(this.bg.node);
-    const c = content.s12;
-    // big bzzzz (S12 end): grey, fading to the bottom
+    const c = content.s11;
+    // big bzzzz (S11 end): grey, fading to the bottom
     this.bzz = TextLine({ text: c.buzz, size: 230, weight: 700, color: '#77748a', align: 'center' });
     for (const it of this.bzz.items) Object.assign(it.node.style, { color: 'transparent', backgroundImage: 'linear-gradient(180deg, #a3a0b6 0%, #8a879d 40%, rgba(60,58,76,0.35) 90%)', WebkitBackgroundClip: 'text', backgroundClip: 'text' });
     this.bzzWrap = el('div', { style: { position: 'absolute', left: '0', top: '0' } }, [this.bzz.node]);

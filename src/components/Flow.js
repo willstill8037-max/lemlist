@@ -1,4 +1,4 @@
-// Building blocks of the blue workflow canvas (S18): a horizontal connector
+// Building blocks of the blue workflow canvas (S16): a horizontal connector
 // line, the buying-signal pill, the AI email card (typed text), the Gmail
 // node and the multichannel sequence tree. All in WORLD coordinates
 // (world = screen pixels of reference frame f2256, line at y = 543).

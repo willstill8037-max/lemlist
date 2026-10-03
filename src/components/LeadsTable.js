@@ -1,4 +1,4 @@
-// lemlist leads table (S17), laid out FLAT in "table coordinates" = screen
+// lemlist leads table (S15), laid out FLAT in "table coordinates" = screen
 // pixels of the front-facing frame f2110. Columns extend to the left of the
 // screen (x < 0) because only the right part is visible in that framing.
 // The scene places it in perspective with a homography (see engine/homography.js).

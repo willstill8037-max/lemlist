@@ -1,4 +1,4 @@
-// Cartoon flamethrower jet (S12 end, f1652–1716). The reference is a looping
+// Cartoon flamethrower jet (S11 end, f1652–1716). The reference is a looping
 // cel-style flame (period measured at 24 frames). Here: a tapered jet from a
 // source point to a head point, with wavy edges whose phase loops every 24
 // frames, a bulbous head made of 3 lobes that bud off, glow, and embers.

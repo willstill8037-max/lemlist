@@ -1,4 +1,4 @@
-// Stylised 3D-looking mosquito (S10–S13). The reference is a 3D render;
+// Stylised 3D-looking mosquito (S09–S11). The reference is a 3D render;
 // this is a vector redraw: navy body with a light rim, 6 thin legs, and two
 // motion-blurred white wings that flap at ~14 Hz (sampled per frame, so the
 // pose at time t is deterministic).

@@ -1,4 +1,4 @@
-// Large dark email card of S12 ("Emilie Paris — Coucou c'est encore moi 👋").
+// Large dark email card of S11 ("Emilie Paris — Coucou c'est encore moi 👋").
 // Local origin = card centre; scale 1 = f1548 framing (outer frame 865 x 390).
 import { el, css } from '../engine/dom.js';
 import { TextLine } from './TextLine.js';

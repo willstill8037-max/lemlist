@@ -1,4 +1,4 @@
-// S15 · f1748–1891 · Back to the light world.
+// S13 · f1748–1891 · Back to the light world.
 //  f1748–1772 the "lemlist" pill (bigger than in S05: logo 84 px at rest)
 //            pulls back from x2.75 with defocus; the logo square pops from a
 //            dot with an overshoot (x1.43 at f1758); "le" / "mli" / "st" typed
@@ -41,7 +41,7 @@ const PTR = G([[1805, [60, 1130, 2.6]], [1808, [40, 1075, 2.6]], [1820, [38, 104
 export default {
   mount(root) {
     root.appendChild(Background({ variant: 'light' }).node);
-    const c = content.s15;
+    const c = content.s13;
     this.group = el('div', { style: { position: 'absolute', left: '0', top: '0', width: '1920px', height: '1080px', transformOrigin: '0 0' } });
     root.appendChild(this.group);
     this.card = PromptCard({ title: c.title, placeholder: c.placeholder, button: c.button });

@@ -1,5 +1,5 @@
 // "bzzzz" lettering: Inter Bold, grey gradient (light top -> dark bottom),
-// slight perspective (the word recedes to the right and fades out), as in S11.
+// slight perspective (the word recedes to the right and fades out), as in S10.
 //   const b = BuzzText({ text: 'bzzzz' });  b.set({ x, y, width, rot, opacity, blur })
 //   (x, y) = centre of the word, width = rendered ink width in px.
 
