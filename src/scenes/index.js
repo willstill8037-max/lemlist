@@ -14,6 +14,7 @@ import s12 from './s12-cest-exactement.js';
 import s14 from './s14-black.js';
 import s15 from './s15-vous-contactez.js';
 import s16 from './s16-prompt-typing.js';
+import s17 from './s17-leads-table.js';
 
 export const scenes = {
   s01,
@@ -30,6 +31,7 @@ export const scenes = {
   s14,
   s15,
   s16,
+  s17,
 };
 
 // Any scene listed in the timeline without a module yet gets a labelled placeholder.
