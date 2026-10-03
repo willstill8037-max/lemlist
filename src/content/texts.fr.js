@@ -11,6 +11,11 @@ export const content = {
     body: ['Bonjour, je vous invite à découvrir notre solution innovante', 'qui pourrait transformer votre activité.'],
   },
   s07: { row: 'Découvrez notre solution', unread: '52 E-mails non lus', del: 'Supprimer', reply: 'Répondre' },
+  s09: {
+    etoui: ['Et', 'oui…'],
+    a1: ['vous', ' ', 'n’êtes', ' ', 'plus'], a2: ['un.e', ' ', 'pro', ' ', 'de', ' ', 'la', ' ', 'vente'],
+    b1: ['vous', ' ', 'êtes'], b2: ['ce', ' ', 'moustique'],
+  },
   website: {
     headline: ['La plateforme pour faire de l’outbound avec', 'précision grâce à l’IA'],
     subtitle: [

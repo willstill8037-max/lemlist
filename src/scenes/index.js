@@ -8,6 +8,7 @@ import s05 from './s05-pill-website.js';
 import s06 from './s06-victor-email.js';
 import s07 from './s07-spam-inbox.js';
 import s08 from './s08-falling-pile.js';
+import s09 from './s09-et-oui.js';
 
 export const scenes = {
   s01,
@@ -18,6 +19,7 @@ export const scenes = {
   s06,
   s07,
   s08,
+  s09,
 };
 
 // Any scene listed in the timeline without a module yet gets a labelled placeholder.
