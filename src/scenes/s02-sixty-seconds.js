@@ -123,7 +123,7 @@ export default {
     // "60.S": measured box (f53-f83): width 339 -> 368 (f71) -> 320 (f83)
     const sw = sampled(t, kk([[52, 330], [56, 344], [62, 354], [71, 368], [77, 356], [83, 320], [100, 320]]));
     const sc = sampled(t, kk([[52, [958, 546]], [62, [962, 552]], [71, [966, 550]], [80, [955, 545]], [84, [940, 540]]]));
-    if (!this.sixtyBase) this.sixtyBase = this.sixty.front.getBoundingClientRect().width || 230;
+    if (!this.sixtyBase) this.sixtyBase = this.sixty.front.offsetWidth || 230; // layout width, transform-independent
     css(this.sixtyWrap, { transform: `translate(${sc[0]}px, ${sc[1]}px) scale(${(sw / this.sixtyBase).toFixed(4)})` });
     this.sixty.set({ rx: -18, ry: 6 });
 

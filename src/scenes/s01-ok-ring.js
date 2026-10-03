@@ -40,10 +40,8 @@ export default {
     this.okBaseW = 150; // measured after fonts load (see update)
   },
   update(t) {
-    if (!this.okMeasured) {
-      const r = this.ok.front.getBoundingClientRect();
-      if (r.width > 0) { this.okBaseW = r.width / (this.lastOkScale || 1); this.okMeasured = true; }
-    }
+    // layout width (offsetWidth ignores transforms, so preview scaling does not affect it)
+    if (!this.okMeasured && this.ok.front.offsetWidth > 0) { this.okBaseW = this.ok.front.offsetWidth; this.okMeasured = true; }
     // portal frame (f52): only the giant "O" over the next scene
     const portal = t >= F(52) - 1e-6;
     css(this.bg.node, { opacity: portal ? 0 : 1 });
@@ -62,7 +60,6 @@ export default {
     const okW = sampled(t, OK_W);
     const [ox, oy] = sampled(t, OK_C);
     const s = okW / this.okBaseW;
-    this.lastOkScale = s;
     const ry = track(t, [[0, 2], [44, 4], [49, 10], [51, 34], [52, 10]]);
     const rxo = track(t, [[0, -22], [44, -20], [51, -12]]);
     css(this.okWrap, { transform: `translate(${ox}px, ${oy}px) scale(${s})` });
