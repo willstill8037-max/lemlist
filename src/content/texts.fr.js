@@ -41,6 +41,25 @@ export const content = {
     from: 'Victor', to: 'to : Claire Dubois', subject: 'Éviter les doubles frais USD/EUR',
   },
   s19: { word: 'Résultat' },
+  s20: {
+    header: 'Claire Dubois',
+    thread: [
+      { name: 'Victor', lines: ['Bonjour Claire,', '', 'Je vous avais écrit par email suite à votre', 'expansion aux US, 🙂 tente ici', '', 'Comment vous gérez aujourd’hui les flux USD/', 'EUR ?', '', 'On voit souvent 2–3 optimisations simples', 'dans ce type de situations, je peux vous les', 'partager si c’est un sujet ?'] },
+      { name: 'Claire Dubois', avatar: true, lines: ['Bonjour Victor,', '', 'En effet c\'est un sujet qu\'on doit adresser. Je', 'veux bien en savoir plus. Pourriez-vous', 'm\'envoyer plus d\'info sur...'] },
+    ],
+    fan: [
+      { j: -1, name: 'Lucas Martin', channel: 'gmail', bars: 2, avatarColor: '#4a3426' },
+      { j: 0, name: 'Oliver Reed', channel: 'gmail', lines: ['Bonjour John,', '', 'Super ! Je propose qu’on s’appelle demain', 'matin pour en discuter.'], avatarColor: '#3b2a20' },
+      { j: 1, name: 'Sophie Turner', channel: 'whatsapp', bars: 2, avatarColor: '#2d211b' },
+      { j: 2, name: 'James Foster', channel: 'linkedin', lines: ['Hello,', '', 'Ravie d’en discuter ensemble. J’ai pris un', 'rendez-vous pour semaine prochaine.'], avatarColor: '#5b4a3e' },
+      { j: 3, name: 'Mia Harper', channel: 'linkedin', bars: 2, avatarColor: '#c79a5a' },
+      { j: 4, name: 'Ella Parker', channel: 'gmail', bars: 2, avatarColor: '#3a2a22' },
+      { j: 5, name: 'Noah Bennett', channel: 'linkedin', bars: 2, avatarColor: '#4b3a2a' },
+    ],
+    front: { name: 'Chloe Bennett', channel: 'gmail', lines: ['Bonjour John,', '', 'L’outil est incroyable ! Je te confirme que j’ai', 'pris un rendez-vous avec toi Lundi prochain.', 'À bientôt.'], avatarColor: '#5a3a28' },
+    chip: 'New message',
+    words: ['Plus', 'de', 'réponses'],
+  },
   website: {
     headline: ['La plateforme pour faire de l’outbound avec', 'précision grâce à l’IA'],
     subtitle: [

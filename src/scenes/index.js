@@ -17,6 +17,7 @@ import s16 from './s16-prompt-typing.js';
 import s17 from './s17-leads-table.js';
 import s18 from './s18-blue-flow.js';
 import s19 from './s19-resultat.js';
+import s20 from './s20-replies.js';
 
 export const scenes = {
   s01,
@@ -36,11 +37,12 @@ export const scenes = {
   s17,
   s18,
   s19,
+  s20,
 };
 
 // Any scene listed in the timeline without a module yet gets a labelled placeholder.
 const variants = { s07: 'dark', s08: 'dark', s09: 'dark', s10: 'dark', s11: 'dark', s12: 'dark', s13: 'dark', s14: 'dark', s18: 'blue', s19: 'blue', s20: 'blue', s21: 'blue', s22: 'blue', s23: 'blue' };
-for (let i = 1; i <= 25; i++) {
+for (let i = 1; i <= 23; i++) {
   const id = `s${String(i).padStart(2, '0')}`;
   if (!scenes[id]) scenes[id] = placeholder(id, variants[id] || 'light');
 }
