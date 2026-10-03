@@ -9,7 +9,9 @@
     "render": "node scripts/render.mjs",
     "render:frame": "node scripts/render.mjs --frame",
     "compare": "node scripts/compare.mjs",
-    "check": "node scripts/check-determinism.mjs"
+    "check": "node scripts/check-determinism.mjs",
+    "side-by-side": "bash scripts/side-by-side.sh",
+    "reference": "bash scripts/extract-reference.sh"
   },
   "engines": {
     "node": ">=18"
