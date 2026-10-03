@@ -10,3 +10,4 @@ reference/frames/
 __pycache__/
 *.pyc
 .venv/
+renders/*.log
