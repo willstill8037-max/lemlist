@@ -51,7 +51,7 @@ export const content = {
       { j: -1, name: 'Lucas Martin', channel: 'gmail', bars: 2, avatarColor: '#4a3426' },
       { j: 0, name: 'Oliver Reed', channel: 'gmail', lines: ['Bonjour John,', '', 'Super ! Je propose qu’on s’appelle demain', 'matin pour en discuter.'], avatarColor: '#3b2a20' },
       { j: 1, name: 'Sophie Turner', channel: 'whatsapp', bars: 2, avatarColor: '#2d211b' },
-      { j: 2, name: 'James Foster', channel: 'linkedin', lines: ['Hello,', '', 'Ravie d’en discuter ensemble. J’ai pris un', 'rendez-vous pour semaine prochaine.'], avatarColor: '#5b4a3e' },
+      { j: 2, name: 'James Foster', channel: 'linkedin', lines: ['Hello,', '', 'Hâte d’en discuter ensemble. J’ai pris un', 'rendez-vous pour semaine prochaine.'], avatarColor: '#5b4a3e' },
       { j: 3, name: 'Mia Harper', channel: 'linkedin', bars: 2, avatarColor: '#c79a5a' },
       { j: 4, name: 'Ella Parker', channel: 'gmail', bars: 2, avatarColor: '#3a2a22' },
       { j: 5, name: 'Noah Bennett', channel: 'linkedin', bars: 2, avatarColor: '#4b3a2a' },
@@ -59,6 +59,17 @@ export const content = {
     front: { name: 'Chloe Bennett', channel: 'gmail', lines: ['Bonjour John,', '', 'L’outil est incroyable ! Je te confirme que j’ai', 'pris un rendez-vous avec toi Lundi prochain.', 'À bientôt.'], avatarColor: '#5a3a28' },
     chip: 'New message',
     words: ['Plus', 'de', 'réponses'],
+  },
+  s21: {
+    events: [['RDV Alex.F X Victor - Demo.F', '8H00 - 8H30'], ['James.F X Victor - Demo', '8H00 - 8H30'], ['Ethan.B X Victor - Demo', '09H30 - 10H30'],
+      ['Lucas.G X Victor - Demo', '10H30 - 11H00'], ['Olivier.R X Victor - Demo', '11H00 - 11H30'], ['John.W X Victor - Demo', '11H30 - 12H00'],
+      ['Sandrine.R X Victor - Demo', '12H00 - 12H30'], ['Jean-Luc.P X Victor - Demo', '12H30 - 13H00']],
+    cards: [
+      { at: [0, 80], name: 'James Foster', channel: 'linkedin', lines: ['Hello,', '', 'Hâte d’en discuter ensemble. J’ai pris un', 'rendez-vous pour semaine prochaine.'], avatarColor: '#5b4a3e' },
+      { at: [140, 272], name: 'Oliver Reed', channel: 'gmail', lines: ['Bonjour John,', '', 'Super ! Je propose qu’on s’appelle demain', 'matin pour en discuter.'], avatarColor: '#3b2a20' },
+      { at: [492, 560], name: 'Lucas Grant', channel: 'linkedin', lines: ['Salut,', '', 'Génial ! Je me peux me libérer ce jeudi pour en', 'discuter ensemble.'], avatarColor: '#4a3426' },
+      { at: [-150, 852], name: 'Ethan Brooks', channel: 'linkedin', lines: ['Hello John,', '', 'C’est parfait le matin à 9h30 c’est bon ? À très', 'bientôt, j’ai hâte !'], avatarColor: '#2d211b' },
+    ],
   },
   website: {
     headline: ['La plateforme pour faire de l’outbound avec', 'précision grâce à l’IA'],
