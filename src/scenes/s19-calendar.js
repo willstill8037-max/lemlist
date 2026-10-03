@@ -47,18 +47,22 @@ export default {
     css(this.panel, { transform: `translate(${px}px, ${py}px)`, filter: fr < 2600 ? `blur(${(6 * (1 - progress(fr, 2582, 2600))).toFixed(2)}px)` : 'none' });
     // events: the first one is there from the start, the next ones pop in (6 frames apart)
     this.events.forEach((ev, i) => {
-      const f0 = i === 0 ? -1 : 2638 + 6 * (i - 1);
+      const f0 = i === 0 ? -1 : 2641 + 6 * (i - 1);
       const p = progress(fr, f0, f0 + 8, 'easeOutCubic');
       css(ev, { opacity: i === 0 ? 1 : clamp((fr - f0) / 3), transform: `translateX(${(60 * (1 - p)).toFixed(1)}px) scale(${(0.86 + 0.14 * p).toFixed(3)})`, transformOrigin: '0 50%' });
     });
-    // reply cards: drift, then get sucked into the panel (f2624-2640)
+    // reply cards: drift, gather into a vertical column at the panel's left
+    // edge (f2621–f2633, measured column x 623, y 289 + 175·i), then slide
+    // into the panel and vanish (f2635–f2641); events pop in from f2641
     this.cards.forEach(({ card, at }, i) => {
       const drift = 0.6 * (fr - 2600);
-      const suck = progress(fr, 2622 + i, 2638 + i, 'easeInCubic');
-      const target = [px + 120, py + 88 + EV_H * (i + 1)];
+      const gather = progress(fr, 2621 + i, 2633, 'easeInOutCubic');
+      const into = progress(fr, 2635 + i * 0.5, 2639 + i * 0.5, 'easeInQuad');
       const x = at[0] + drift * (i % 2 ? -0.3 : 0.4), y = at[1] - drift * 0.2;
-      const s = 0.97 * (1 - 0.15 * suck);
-      css(card.node, { transform: `translate(${(x + (target[0] - x) * suck).toFixed(1)}px, ${(y + (target[1] - y) * suck).toFixed(1)}px) scale(${s.toFixed(3)})`, opacity: fr < 2640 + i ? 1 : 0, filter: suck > 0.05 && suck < 0.98 ? 'blur(3px)' : 'none' });
+      const col = [623, 289 + 175 * i];
+      const gx = x + (col[0] - x) * gather + 260 * into, gy = y + (col[1] - y) * gather;
+      const s = 0.97 * (1 - 0.12 * into);
+      css(card.node, { transform: `translate(${gx.toFixed(1)}px, ${gy.toFixed(1)}px) scale(${s.toFixed(3)})`, opacity: 1 - into, filter: gather > 0.05 && into < 0.98 && (gather < 0.95 || into > 0.02) ? 'blur(3px)' : 'none' });
     });
   },
 };

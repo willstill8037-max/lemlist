@@ -12,14 +12,41 @@ connus listés ci-dessous.
 |---|---|---|
 | Format | 1920×1080, 60 fps, 3 099 images, H.264 yuv420p BT.709 — identique à la source | `ffprobe renders/lemlist_reconstruction.mp4` |
 | Durée | vidéo 51,650 s ; audio 51,712 s (flux source copié) | idem |
-| Audio | flux AAC source **copié sans ré-encodage** (`-c:a copy`) → synchronisation exacte par construction | `scripts/render.mjs` |
-| Déterminisme | voir §4 (deux sessions Chromium, deux ordres de seek, comparaison octet par octet) | `npm run check` |
+| Audio | flux AAC source **copié sans ré-encodage** : MD5 des paquets audio identique à la source (`fe5128fa…`), 2 424 trames AAC, 51,712 s | `ffmpeg -i X -map 0:a -c copy -f md5 -` |
+| Déterminisme | 17/17 images identiques octet pour octet (voir §4) | `npm run check` |
 | Coupes | les 21 scènes commencent/finissent aux images de coupe mesurées (§ ANALYSIS) | `src/timeline.json` |
 | Métriques image par image | voir §2 | `python tools/fidelity_metrics.py` |
 
 ## 2. Mesures sur toute la vidéo
 
-METRICS_PLACEHOLDER
+Sur les 3 099 images (`docs/analysis/fidelity_per_frame.csv`, courbe `fidelity_curve.png`) : **MAE moyenne 5.55 / 255**, **PSNR médian 25.9 dB**, **edge-IoU moyen 0.395**. 60 % des images ont une MAE < 5, 86 % < 10.
+
+| Scène | Images | MAE moy. | PSNR méd. (dB) | edge-IoU moy. | Pire image (MAE) |
+|---|---|---|---|---|---|
+| s01 OK ring fly-through | 0–52 | 11.21 | 17.89 | 0.168 | f52 (47.16) |
+| s02 60 s → pour vous expliquer | 52–135 | 11.87 | 18.07 | 0.305 | f52 (47.16) |
+| s03 Pourquoi ? | 136–154 | 1.71 | 33.29 | 0.637 | f136 (2.42) |
+| s04 3D lemlist cube | 155–203 | 7.78 | 23.72 | 0.283 | f158 (87.93) |
+| s05 lemlist pill + website | 204–369 | 2.97 | 26.99 | 0.663 | f369 (5.92) |
+| s06 Victor email composer | 346–545 | 2.03 | 33.23 | 0.707 | f369 (5.92) |
+| s07 Spam inbox | 546–835 | 6.97 | 23.84 | 0.292 | f799 (13.65) |
+| s08 Falling email, pile | 836–939 | 7.75 | 27.19 | 0.085 | f843 (11.82) |
+| s09 Et oui… vous n'êtes plus un.e pro de la vente → mosquito | 940–1214 | 2.19 | 31.23 | 0.675 | f1203 (5.18) |
+| s10 Mosquito hovering – bzzzz | 1215–1509 | 1.83 | 32.26 | 0.227 | f1394 (4.10) |
+| s11 et c'est exactement → bzzzz + flamethrower | 1510–1716 | 9.79 | 23.49 | 0.231 | f1510 (31.25) |
+| s12 Black | 1717–1747 | 0.00 | 84.03 | 1.000 | f1717 (0.00) |
+| s13 lemlist pill – Vous contactez les bonnes personnes | 1748–1891 | 4.58 | 23.58 | 0.413 | f1890 (9.35) |
+| s14 Prompt typing + Démarrer | 1892–1995 | 3.23 | 27.66 | 0.249 | f1916 (4.69) |
+| s15 Leads table, buying signal | 1996–2159 | 7.78 | 20.24 | 0.323 | f2020 (10.29) |
+| s16 Blue flow: signal → AI email → Gmail → sequence tree | 2160–2384 | 7.69 | 25.74 | 0.309 | f2384 (18.51) |
+| s17 Résultat | 2385–2434 | 5.69 | 26.75 | 0.169 | f2434 (7.82) |
+| s18 LinkedIn reply → fan of replies → Plus de réponses | 2435–2585 | 9.66 | 21.32 | 0.277 | f2585 (26.69) |
+| s19 Calendar – demos booked | 2586–2694 | 14.06 | 18.43 | 0.232 | f2586 (31.79) |
+| s20 Outro – lemlist pill + CTA + app table | 2695–2914 | 3.97 | 23.74 | 0.436 | f2766 (5.77) |
+| s21 Outro – www.lemlist.fr | 2915–3098 | 1.58 | 31.78 | 0.629 | f2945 (1.72) |
+
+Les scènes les plus éloignées (S01–S02, S11, S18–S19) sont celles qui contiennent des rendus 3D (anneau, éclats, réveils), un effet procédural (flamme) ou des mouvements relevés avec moins de précision (éventail et aspiration des cartes). Les scènes d'interface et de typographie (S03, S05, S06, S09, S10, S21) sont à MAE ≈ 1,6–3.
+Les planches `docs/analysis/contact_sheets/sNN.jpg` montrent référence | reconstruction aux mêmes instants pour chaque scène.
 
 Lecture des métriques : la MAE (erreur absolue moyenne, 0–255) et le PSNR sont
 dominés par les grands aplats (fonds), qui sont très proches ; ils
@@ -54,7 +81,13 @@ Vérifié image par image ou toutes les 2–6 images sur les mouvements rapides 
 
 ## 4. Déterminisme
 
-DETERMINISM_PLACEHOLDER
+`npm run check` (`scripts/check-determinism.mjs`) : 17 images réparties sur
+toutes les scènes, rendues dans deux sessions Chromium indépendantes, dans deux
+ordres de seek différents (croissant / mélangé) → **17/17 identiques octet pour
+octet**. En plus, 4 images (f50, f120, f1000, f2500) rendues isolément avec
+`render.mjs --frame N` sont identiques aux images du rendu complet. Le rendu
+complet a été fait en plusieurs passes (`--reuse`) sans aucune différence aux
+raccords, ce qui confirme qu'une image ne dépend pas de l'historique.
 
 ## 5. Assets réutilisés ou reconstruits
 
@@ -94,3 +127,14 @@ visuel non certifié de la police d'origine.
 | S18–S19 | contenu des cartes de réponse peu lisibles (Mia Harper, Ella Parker…) remplacé par des barres grises ; positions relevées au 1/4 | flou de la source |
 | Partout | flou de mouvement approximé par sur-échantillonnage temporel (4–8 sous-images) sur les plages listées dans `timeline.json` | l'original a un flou de rendu continu |
 | Audio | mix original réutilisé ; aucun effet/musique recréé ; présence d'une voix off **non vérifiée** à l'écoute | contrainte de l'environnement |
+
+## 8. Corrections faites après comparaison
+
+| Problème constaté | Correction | Effet mesuré |
+|---|---|---|
+| Rendu complet : l'audio était coupé à la dernière image vidéo (51,648 s) | `-frames:v` retiré pour le rendu complet | audio 51,712 s, MD5 identique à la source |
+| S18 : l'éventail des réponses suivait une trajectoire inventée (zoom ×0,5) | chaîne `Q + j·D` mesurée image par image (f2490–f2522), carte Chloe sortant de la pile | f2498 MAE 13 → 4 |
+| S19 : les réponses étaient aspirées vers des cibles fausses | regroupement en colonne mesurée (x 623) puis glissement dans le calendrier | f2640 MAE 29 → 11 |
+| S07 : sélection des lignes en retard de 2 images | la ligne est entièrement rouge à l'image d'événement mesurée | f586 conforme |
+| S07 : bascule finale trop faible | roulis −9° → −11° | f835 MAE 13,9 → 12,2 |
+| S01/S02 : largeur de base du texte mesurée avec `getBoundingClientRect` (dépendait de l'échelle d'aperçu) | `offsetWidth` (indépendant des transformations) | aperçu et rendu identiques |

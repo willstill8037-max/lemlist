@@ -59,7 +59,7 @@ export default {
     css(this.world, { transform: `translate(${tx.toFixed(2)}px, ${ty.toFixed(2)}px) scale(${s.toFixed(4)})` });
     // 3D tilt of the whole plane (f774 -> f781), slow drift afterwards
     const rx = track(t, [[228, 0], [235, 26, 'easeOutCubic'], [288, 28]]);
-    const rz = track(t, [[228, 0], [235, -7, 'easeOutCubic'], [288, -8]]);
+    const rz = track(t, [[228, 0], [235, -9, 'easeOutCubic'], [288, -11]]);
     const ry = track(t, [[228, 0], [235, 10, 'easeOutCubic'], [288, 12]]);
     const tyT = track(t, [[228, 0], [235, 40, 'easeOutCubic'], [288, 55]]);
     css(this.tilt, { transform: `translateY(${tyT}px) rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg)` });
@@ -70,7 +70,7 @@ export default {
     const sel = refill ? SELECT_B : SELECT_A;
     for (let i = 0; i < 7; i++) {
       const ent = sel.find(([r]) => r === i);
-      const selected = ent ? progress(fr, ent[1], ent[1] + 2) : 0;
+      const selected = ent ? progress(fr, ent[1] - 2, ent[1]) : 0; // measured: fully red AT the event frame
       const pop = ent ? Math.sin(Math.PI * clamp((fr - ent[1]) / 14)) : 0;
       const vis = clamp(visibleRows - i);
       this.inbox.setRow(i, { selected, pop, visible: vis });

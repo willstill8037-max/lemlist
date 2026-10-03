@@ -93,7 +93,9 @@ if (withAudio) {
   if (mode === 'full') args.push('-i', audio);
   else args.push('-ss', (first / fps).toFixed(6), '-t', ((last - first + 1) / fps).toFixed(6), '-i', audio);
 }
-args.push('-frames:v', String(total), '-map', '0:v');
+// full render: no -frames:v (it would also cut the audio at the last video frame)
+if (mode !== 'full') args.push('-frames:v', String(total));
+args.push('-map', '0:v');
 if (withAudio) args.push('-map', '1:a');
 args.push('-vf', 'scale=out_color_matrix=bt709:out_range=tv,format=yuv420p',
   '-c:v', 'libx264', '-preset', 'slow', '-crf', String(crf), '-profile:v', 'high',
