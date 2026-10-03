@@ -8,8 +8,9 @@ import { el, css } from '../engine/dom.js';
 const SHAPES = {
   mac: (fill, stroke) => `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 28 34" style="overflow:visible">
       <path d="M1.5 1.5 L1.5 26 L7.6 20.4 L11.6 30 L15.6 28.3 L11.7 19 L19.8 19 Z" fill="${fill}" stroke="${stroke}" stroke-width="2.2" stroke-linejoin="round"/></svg>`,
-  plane: (fill, stroke) => `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="44" viewBox="0 0 40 44" style="overflow:visible">
-      <path d="M1 1 L38 15 L21 21 L14 40 Z" fill="${fill}" stroke="${stroke}" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
+  // navigation arrow, tip at the top-right corner (S07, measured on f640: 58 x 54 px)
+  plane: (fill, stroke) => `<svg xmlns="http://www.w3.org/2000/svg" width="60" height="56" viewBox="-59 -1 60 56" style="overflow:visible;position:absolute;left:-59px;top:-1px">
+      <path d="M0 0 L-58 19 L-26 27 L-28 54 Z" fill="${fill}" stroke="${stroke}" stroke-width="1.5" stroke-linejoin="round"/></svg>`,
 };
 
 export function Cursor({ shape = 'mac', fill = '#111', stroke = '#fff', size = 1 } = {}) {

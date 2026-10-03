@@ -10,6 +10,7 @@ export const content = {
     sender: 'Victor', email: 'Victor@gmail.com', button: 'Envoyer',
     body: ['Bonjour, je vous invite à découvrir notre solution innovante', 'qui pourrait transformer votre activité.'],
   },
+  s07: { row: 'Découvrez notre solution', unread: '52 E-mails non lus', del: 'Supprimer', reply: 'Répondre' },
   website: {
     headline: ['La plateforme pour faire de l’outbound avec', 'précision grâce à l’IA'],
     subtitle: [
