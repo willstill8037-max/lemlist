@@ -35,6 +35,12 @@ export const content = {
       { name: 'Pierre Garnier', email: 'pierre.g@pepsi.com', phone: '+33 6 23 45 67 89', signal: 'Un employé de Scaleway a visité votre...', dot: 'indigo', company: 'Pepsi', logoColor: '#1b4fa0', hair: '#4b3a2a' },
     ],
   },
+  s18: {
+    signal: 'A annoncé sa récente levée de fonds',
+    email: ['Bonjour Claire,', '', 'Félicitations pour votre récente levée et votre', 'expansion aux US !', '', 'Lever des fonds, c’est bien. Les perdre en frais de', 'change, moins.', '', 'Des boîtes comme Globex ont économisé +50k€/an', 'en optimisant leur gestion USD/EUR.'],
+    from: 'Victor', to: 'to : Claire Dubois', subject: 'Éviter les doubles frais USD/EUR',
+  },
+  s19: { word: 'Résultat' },
   website: {
     headline: ['La plateforme pour faire de l’outbound avec', 'précision grâce à l’IA'],
     subtitle: [
