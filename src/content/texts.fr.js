@@ -16,6 +16,7 @@ export const content = {
     a1: ['vous', ' ', 'n’êtes', ' ', 'plus'], a2: ['un.e', ' ', 'pro', ' ', 'de', ' ', 'la', ' ', 'vente'],
     b1: ['vous', ' ', 'êtes'], b2: ['ce', ' ', 'moustique'],
   },
+  s11: { buzz: 'bzzzz' },
   website: {
     headline: ['La plateforme pour faire de l’outbound avec', 'précision grâce à l’IA'],
     subtitle: [

@@ -51,8 +51,8 @@ export function Mosquito() {
     // with a per-frame jitter like a rendered motion-blurred wing.
     const f = Math.floor(t * 60);
     const ph = t * 2 * Math.PI * 14;
-    const a0 = -38 + 36 * Math.sin(ph) + 6 * (rand(77, f) - 0.5);
-    const a1 = -20 + 26 * Math.sin(ph + 2.1) + 6 * (rand(78, f) - 0.5);
+    const a0 = -55 + 32 * Math.sin(ph) + 6 * (rand(77, f) - 0.5);
+    const a1 = -28 + 24 * Math.sin(ph + 2.1) + 6 * (rand(78, f) - 0.5);
     wings[0].setAttribute('transform', `rotate(${a0.toFixed(2)}) scale(1, ${(0.9 + 0.1 * Math.cos(ph)).toFixed(3)})`);
     wings[1].setAttribute('transform', `rotate(${a1.toFixed(2)})`);
   }
